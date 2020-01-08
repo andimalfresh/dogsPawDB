@@ -1,10 +1,10 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('contest').del()
     .then(function () {
       // Inserts seed entries
-      return knex('table_name').insert([
+      return knex('contest').insert([
         {
           id: 1,
           name: 'First Contest EVER',
@@ -15,7 +15,7 @@ exports.seed = function(knex) {
           contest_active: true,
         },
         {
-          id: 1,
+          id: 2,
           name: 'The Second Contest',
           start_date: 'Maybe next week',
           end_date: 'MLK Day',
