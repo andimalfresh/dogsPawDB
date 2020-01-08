@@ -5,9 +5,24 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+        {
+          id: 1,
+          name: 'First Contest EVER',
+          start_date: 'tomorrow',
+          end_date: 'next sunday',
+          prizes: 'You win a hotdog from 7-11 thats been on the roller since 6am',
+          rules: 'Just post a cool pic of your pet (and give us your email)',
+          contest_active: true,
+        },
+        {
+          id: 1,
+          name: 'The Second Contest',
+          start_date: 'Maybe next week',
+          end_date: 'MLK Day',
+          prizes: 'Just what everyone wants/needs a Yeti Tumbler',
+          rules: 'Just post a cool pic of your pet (and give us your email)',
+          contest_active: false,
+        },
       ]);
     });
 };
